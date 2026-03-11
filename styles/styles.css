@@ -531,9 +531,7 @@ section {
 }
 .services__lists {
     width: 100%;
-    background-image: url(../images/bg-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(180.00deg, rgba(23, 26, 36, 1) 0%,rgba(23, 26, 36, 0.2) 100%);    
     padding: 30px 20px 30px 40px;
     margin-bottom: 45px;
 }
