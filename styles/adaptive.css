@@ -1,0 +1,492 @@
+@media (min-width: 768px)  {
+
+    .header {
+        padding: 0 40px;
+    }
+    .sidebar {    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 32px 25px 40px;
+        flex-shrink: 0;
+    }
+    .sidebar__logo-icon {
+        color: #303030;
+        transition: all 0.3s ease;
+    }
+    .sidebar__logo-icon:hover {
+        color: #FF6C00;
+    }
+    .sidebar__socials {
+        flex-direction: row-reverse;
+        writing-mode: vertical-rl;
+    }
+    .sidebar__socials-line {     
+        width: 1px;
+        height: 60px;
+        background-color: #303030;   
+        transform: rotate(180deg);
+    }
+    .sidebar__link {        
+        transform: rotate(180deg);
+    }
+    
+
+    .nav {
+        padding: 40px 20px 0 20px;
+        align-items: start;
+    }
+    .nav__links {
+        display: flex;
+        gap: 20px;
+        padding-top: 12px;
+    }
+    .nav__link {
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        transition: color 0.3s;
+    }
+    .nav__link:hover {
+        color: #FF6C00;
+    }
+    .nav__contacts {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .nav__contacts-link {
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+    }
+    
+    .slider__content {
+        left: 100px;
+        max-width: 500px;
+    }
+    .slider__text {
+        font-size: 18px;
+    }
+    .slider__controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        bottom: 40px;
+        right: 20px;    
+        
+        z-index: 10;
+    }
+    .slider__button {
+        width: 60px;
+        height: 24px;
+        display: flex;
+        justify-content: left;
+        border-bottom: 1px solid rgba(157, 164, 189, 0.6); 
+        color: rgba(157, 164, 189, 0.6);
+        font-size: 11px;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+    .button-next {
+        justify-content: right;
+    }
+    .slider__button:hover {
+        color: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 1);
+    }
+    .slider__button svg {
+        width: 16px;
+        height: 16px;
+    }
+    .slider__button:hover svg path {
+        stroke: #FF6C00;
+    }
+
+
+    .pagination {
+        position: absolute;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        z-index: 1000;
+        top: 50%;
+        right: 20px;    
+        gap: 12px;
+    }
+    .pagination__dot {
+        width: 8px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .pagination__dot:hover,
+    .pagination__dot--active {
+        width: 18px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .burger {
+        display: none;
+    }
+    .mobile-nav__logo {
+        display: none;
+    }
+    section {
+        padding: 100px 0;
+    }
+    .container {
+        padding: 0 40px;
+    }
+
+
+    .about__container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;  
+        gap: 30px;
+    }
+    .about__title-box {
+        max-width: 330px;
+    }
+    .about__images {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about__image {
+        display: block;
+        width: 100%;
+    }
+    .about__text {
+        font-size: 18px;
+    }  
+    .about__description {
+        margin-bottom: 77px;
+    }  
+    
+    .services__title {
+        font-size: 42px;
+        line-height: 40px;
+    }
+    .services__lists {
+        padding: 30px 40px;        
+    }
+    .services__text {
+        font-size: 18px;
+    }
+    
+    .why__container {
+        align-items: normal;
+    }
+    .why__description {
+        justify-content: end;
+    }
+    
+    
+    .barbers__card img {
+        width: 450px;
+    }
+
+    .photo__gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .footer__booking {
+        padding: 100px 40px;
+        align-items: baseline;
+    }
+    .footer__booking h3 {
+        text-align: start;
+    }
+    .footer__contacts {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 40px;
+    }
+    .contacts h3 {
+        text-align: start;
+    }
+    .contacts a {
+        margin-bottom: 0;
+    }
+    .footer__copyright {
+        padding: 0;
+    }
+    .footer__booking .input-group:nth-child(1),
+    .footer__booking .input-group:nth-child(2) {
+        width: calc(50% - 10px);
+    }    
+    .footer__booking .input-group:nth-child(3) {
+        width: 100%;
+    }
+    .footer__end {
+        padding: 56px 40px;
+    }
+    
+}
+@media (min-width: 960px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .header {
+        padding: 0 60px;
+    }
+
+    .nav {
+        padding: 40px 20px 0 20px;
+        align-items: center;
+    }
+    .nav__links {
+        padding: 0;
+    }
+    .nav__contacts {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .about {
+        padding: 100px 0;
+    }     
+    .about__images {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about__image {
+        display: block;
+        max-width: 100%;
+    }
+    .about__title {
+        font-size: 42px;
+        line-height: 49px;
+    }   
+    
+    .why__description {
+        gap: 20px;
+    }
+    .why__description-inner-box {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .why__description-inner-box:first-child {
+        margin-bottom: 0;
+    }
+    .why__description-inner-box:last-child {
+        margin-top: 0;
+    }
+    
+    .barbers__list {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .barbers__card img {
+        width: 370px;
+    }
+
+    .photo__gallery img {
+        height: 360px;
+    }
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__booking {
+        padding: 100px 60px;
+    }
+    .footer__contacts {
+        flex-direction: column;
+        align-items: baseline;
+        padding: 100px 60px;
+    }
+    .contacts a {
+        margin-bottom: 70px;
+    }
+    .footer__end {
+        padding: 56px 60px;
+    }
+} 
+@media (min-width: 1199px) {
+    .container {
+        padding: 0 80px;
+    }   
+
+    .header {
+        padding: 0 80px;
+    }
+
+    .nav {
+        padding: 40px 20px 0 100px;
+    }
+    .nav__links {
+        gap: 30px;
+    }
+
+    .slider__title {
+        font-size: 72px;
+    }   
+
+    .about__images {
+        flex-direction: row;
+        gap: 30px;
+        width: 100%;
+    }
+    .about__image {
+        object-fit: cover;
+        flex: 1; /* Равномерное распределение ширины */
+        min-width: 0; /* Предотвращает переполнение */
+        height: auto; /* Фиксированная высота для всех изображений */    }
+    .about__title-box {
+        max-width: 470px;
+    }
+    .about__title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .services__lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+        background: none;
+        padding: 0;
+    }    
+    .services__list {
+        background: linear-gradient(180.00deg, rgba(9, 11, 19, 1) 0%,rgba(9, 11, 19, 0.2) 100%);  
+        padding: 30px 20px;
+        margin-bottom: 0;
+    }
+
+    .why__container {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 130px;
+    }
+    .why__description {
+        gap: 30px;
+    }
+    .why__description-inner-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .why__description-inner-box:first-child {
+        margin-bottom: 35px;
+    }
+    .why__description-inner-box:last-child {
+        margin-top: 35px;
+    }
+    
+    .photo__gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }  
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__booking {
+        padding: 100px 30px 100px 80px;
+    }    
+    .footer__contacts {
+        padding: 100px 80px;
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+    .contacts a {
+        margin-bottom: 70px;
+    }  
+    .footer__end {
+        padding: 56px 80px;
+    }
+}
+@media (min-width: 1440px) {
+    section {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 120px 0;
+    }
+
+    .container {
+        padding: 0 215px;
+    }
+    
+    .header {
+        max-width: 1600px;
+        padding: 0 215px;
+    }
+
+    .nav__contacts {
+        gap: 40px;
+    }
+
+    .footer__booking {
+        padding: 120px 30px 120px 215px;
+    }    
+    .footer__contacts {
+        padding: 120px 215px 120px 120px;        
+    }
+    .footer__end {
+        padding: 56px 215px;
+    }
+}
+
+
+/* Анимация для кнопок */
+.nav-btn,
+.mobile--btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::after,
+.mobile--btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.nav-btn:active::after,
+.mobile-btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Улучшенная валидация */
+.form__input:invalid:not(:placeholder-shown),
+.form__select:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ff4444;
+}
+
+.form__input:valid:not(:placeholder-shown) {
+    border-bottom-color: #00C851;
+}
+
+/* Стили для disabled состояния */
+.form__submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form__submit:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
