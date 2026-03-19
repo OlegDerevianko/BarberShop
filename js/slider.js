@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Проверяем ширину экрана
     if (window.innerWidth <= 768) {
         console.log('Слайдер отключен на мобильных устройствах');
-        return; // Выходим из функции, слайдер не работает
+        return; 
     }
     
     const track = document.querySelector('.slider__track');
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.button-next');
     const paginationDots = document.querySelectorAll('.pagination__dot');
     
-    // Проверяем, есть ли все элементы на странице
     if (!track || !slides.length || !prevBtn || !nextBtn || !paginationDots.length) {
         console.log('Slider elements not found');
         return;
@@ -20,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     const slideCount = slides.length;
     
-    // Функция обновления слайдера
     function updateSlider(index) {
-        // Зацикливание
         if (index < 0) {
             currentIndex = slideCount - 1;
         } else if (index >= slideCount) {
@@ -31,10 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex = index;
         }
         
-        // Двигаем трек
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         
-        // Обновляем пагинацию
         paginationDots.forEach((dot, i) => {
             if (i === currentIndex) {
                 dot.classList.add('pagination__dot--active');
@@ -44,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Кнопки вперед/назад
     prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
         updateSlider(currentIndex - 1);
@@ -55,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlider(currentIndex + 1);
     });
     
-    // Пагинация
     paginationDots.forEach((dot, index) => {
         dot.addEventListener('click', (e) => {
             e.preventDefault();
@@ -63,10 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Инициализация первого слайда
     updateSlider(0);
     
-    // Опционально: свайп для мобильных
     let touchStartX = 0;
     let touchEndX = 0;
     
@@ -82,10 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleSwipe() {
         const swipeThreshold = 50;
         if (touchEndX < touchStartX - swipeThreshold) {
-            // Свайп влево - следующий слайд
             updateSlider(currentIndex + 1);
         } else if (touchEndX > touchStartX + swipeThreshold) {
-            // Свайп вправо - предыдущий слайд
             updateSlider(currentIndex - 1);
         }
     }

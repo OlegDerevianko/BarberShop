@@ -243,9 +243,7 @@ section {
 
 
 
-.burger-toggle {
-    display: none;
-}
+
 .burger {
     display: flex;
     flex-direction: column;
@@ -254,6 +252,9 @@ section {
     height: 20px;
     cursor: pointer;
     z-index: 100;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 .burger span {
     display: block;
@@ -264,6 +265,31 @@ section {
 }
 .burger:hover span {
     background-color: #FF6C00;
+}
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 .mobile-nav__logo {
     z-index: 100;
@@ -287,6 +313,9 @@ section {
     transition: right 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
+}
+.mobile-nav.active {
+    right: 0;
 }
 .mobile-nav__header {
     display: flex;
@@ -353,31 +382,6 @@ section {
 .youtube {
     margin-left: 100px;
 }
-#burger-toggle:checked ~ .mobile-nav {
-    right: 0;
-}
-#burger-toggle:checked ~ .slider .nav .burger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-#burger-toggle:checked ~ .slider .nav .burger span:nth-child(2) {
-    opacity: 0;
-}
-#burger-toggle:checked ~ .slider .nav .burger span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-#burger-toggle:checked ~ .slider::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 99;
-}
-
-
-
 
 .modal-overlay {
     position: fixed;

@@ -12,8 +12,6 @@
 </head>
 <body>
     <header class="header">
-        <input type="checkbox" id="burger-toggle" class="burger-toggle">
-        
         <aside class="sidebar">
             <a class="sidebar__logo" href="">
                 <svg class="sidebar__logo-icon" width="68" height="56">
@@ -28,13 +26,12 @@
         </aside>
         
         <div class="slider">
-
             <div class="pagination">
                 <span class="pagination__dot pagination__dot--active"></span>
                 <span class="pagination__dot"></span>
                 <span class="pagination__dot"></span>
             </div>
-
+    
             <nav class="nav">
                 <div class="nav__links">
                     <a class="nav__link" href="#about">About</a>
@@ -52,13 +49,13 @@
                         <use href="./images/icons.svg#_icon-logo"></use>
                     </svg>
                 </a>
-                <label for="burger-toggle" class="burger">
+                <button class="burger" id="burgerBtn" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </label>
+                </button>
             </nav>
-
+    
             <div class="slider__container">
                 <div class="slider__track">
                     <div class="slider__slide">
@@ -72,7 +69,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <div class="slider__overlay">
                 <div class="slider__content">
                     <div class="sub-title-box">
@@ -84,7 +81,7 @@
                     <p class="slider__text">We work quickly, carefully and with style.</p>                    
                 </div>
             </div>
-
+    
             <div class="slider__controls">
                 <button class="slider__button button-prev" aria-label="Previous slide">
                     Back
@@ -95,10 +92,9 @@
             </div>
         </div>
         
-        <div class="mobile-nav">
+        <div class="mobile-nav" id="mobileNav">
             <div class="mobile-nav__header">
-                
-                <label for="burger-toggle" class="mobile-nav__close">×</label>
+                <button class="mobile-nav__close" id="closeMenuBtn">×</button>
             </div>            
             <div class="mobile-nav__links">
                 <a class="mobile-nav__link" href="#about">About</a>
@@ -462,5 +458,6 @@
 
     <script src="./js/slider.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
 </body>
 </html>
