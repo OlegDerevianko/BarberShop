@@ -56,17 +56,27 @@
 
 <h2>🛠️ <span>Technologies Used</span></h2>
 <ul>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
+    <li>HTML5
+    <p>Semantic markup structure</p>
+    </li>    
+    <li>CSS3
+    <p>Flexbox, Grid, animations, media queries</p>
+    </li>    
+    <li>JavaScript
+    <p>DOM manipulation, event handling, form validation</p>
+    </li>
     <li>Flexbox</li>
     <li>CSS Grid</li>
-    <li>Google Fonts</li>
-    <li>SVG Sprites</li>
+    <li>Google Fonts
+    <p>Raleway and Open Sans fonts</p>
+    </li>
+    <li>SVG Sprites
+    <p>Icon system for scalability</p>
+    </li>
 </ul>
-<p><strong>HTML5</strong> - Semantic markup structure</p>
-<p><strong>CSS3</strong> - Flexbox, Grid, animations, media queries</p>
-<p><strong>JavaScript</strong> - DOM manipulation, event handling, form validation</p>
-<p><strong>Google Fonts</strong> - Raleway and Open Sans fonts</p>
-<p><strong>SVG Sprite</strong> - Icon system for scalability</p>
+
+
+
+
+
                 
